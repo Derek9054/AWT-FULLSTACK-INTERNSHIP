@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .size{
+
+   height:150px;
+   width: 150px;
+   background-color: brown;
+   font-family: 'Times New Roman', Times, serif;
+   color: antiquewhite;
+
+   }
+   #ok{
+
+    width: 300px;
+   }
+  
+
+    </style>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js" integrity="sha512-57oZ/vW8ANMjR/KQ6Be9v/+/h6bq9/l3f0Oc7vn6qMqyhvPd1cvKBRWWpzu0QoneImqr2SkmO4MSqU+RpHom3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+     
+     <script>
+     $(document).ready(function(){
+            $("#hello").draggable();
+          
+            $("#drag span").draggable({
+                     containment: "#drag"
+            });
+
+ 
+            $("#hor span").draggable({
+                   axis: "x"
+            });
+       
+            $("#ver span").draggable({
+                   axis:"y"
+            });
+
+            $("#sec span").draggable({
+                     delay:3000
+            });
+
+
+            $("#ok span").draggable({
+                     distance:100
+            });
+
+
+     });
+   
+
+
+     </script>
+</head>
+<body>
+    <div class="size" id="hello"> <span> Hello</span></div><hr>
+    <div class="size" id="drag" > <span>This is my Home..And i can move within it only...</span></div><hr>
+    <div class="size" id="hor"  > <span>i can move only Hotizently</span></div><hr>
+    <div class="size" id="ver"  > <span>i can move only Vertically</span></div><hr>
+    <div class="size" id="sec"  > <span>I can move After 3 sec..</span></div><hr>
+    <div class="size" id="ok"   > <span>I can move After 200 px</span></div><hr>
+</body>
+</html>
