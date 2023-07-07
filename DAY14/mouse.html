@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>    #img{
+
+height: 200px;
+width: 200px;
+
+    }</style>
+</head>
+<body>
+    
+    <img src="C:\Users\student\Pictures\ankit.png" id="img1" >
+    <button onclick="fade()">Click  Me</button>
+ 
+
+    <!-- <img src="C:\Users\student\Pictures\ankit.png" id="img2">
+        <button onclick="fade()">Click  Me</button> -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <script>
+            $("document").ready(function(){
+                
+                $("#img1").mouseenter(function(){
+                    
+                    $("#img1").css("width","500px")
+                
+            });
+            $("#img1").mouseleave(function(){
+                
+                $("#img1").css("width","100px")
+                
+            });
+            
+        });
+        
+    </script>
+        </body>
+</html>
